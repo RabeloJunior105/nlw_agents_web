@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { use, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
 type AudioParams = {
@@ -68,7 +68,7 @@ export function RecordAudio() {
             recorder.current.stop()
         }
 
-        if(intervalRef.current) {
+        if (intervalRef.current) {
             clearInterval(intervalRef.current)
         }
     }
